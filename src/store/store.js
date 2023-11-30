@@ -1,8 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import produceReducer from './produce';
+import cartReducer from './cart';
 
 const rootReducer = combineReducers({
+  cart: cartReducer,
   produce: produceReducer,//responsible for handling the produce information in the store aka the produce slice of state
+
 });
 
 
