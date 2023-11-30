@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { populateProduce } from './store/produce';
 import Cart from './components/Cart';
 import ProduceList from './components/ProduceList';
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(populateProduce());
+  }, [dispatch]);//dispatch function should never change across re-renders so this should still only dispatch the action once
+
   const [showCart, setShowCart] = useState(false);
 
   return (

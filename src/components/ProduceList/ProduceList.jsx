@@ -1,8 +1,9 @@
+import { useSelector } from 'react-redux';//useSelector accepts a function parameter, passes updated state into function when state is updated,
 import ProduceDetails from './ProduceDetails';
 import './ProduceList.css';
 
 function ProduceList() {
-  const produce = {};
+  const produce = useSelector(state => state.produce);
 
   const produceArr = Object.values(produce);
 

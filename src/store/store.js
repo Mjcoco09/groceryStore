@@ -1,7 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import produceReducer from './produce';
 
 const rootReducer = combineReducers({
-
+  produce: produceReducer,//responsible for handling the produce information in the store aka the produce slice of state
 });
 
 
