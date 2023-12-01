@@ -16,7 +16,7 @@ export default function cartReducer (state = {}, action) {
                 ...state, //state defaults to a blank obj but if it has a value it will be passed in here from the parameter
                 [produceId]: {
                     id: produceId, 
-                    count
+                    count: 1
                 }
             };
             return newState;
